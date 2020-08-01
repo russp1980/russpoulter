@@ -94,6 +94,7 @@ select {
 
     body{
       font-family: 'Inter', sans-serif;
+      color: #212529;
     }
     
     .wrapper{
@@ -106,7 +107,7 @@ select {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      padding-top: 1.5rem;
+      padding: 1.5rem 0;
     }
 
     .nav__list{
@@ -116,6 +117,21 @@ select {
     .nav__list li{
       display: inline-block;
       margin-left: 1rem;
+    }
+
+    .nav__list a{
+      text-decoration: none;
+      line-height: 1rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #212529;
+      position: relative;
+      top: 5px;
+      transition: .3s;
+    }
+
+    .nav__list a:hover{
+      color: #0047FC;
     }
 
 
