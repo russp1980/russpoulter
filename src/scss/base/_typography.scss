@@ -1,0 +1,6 @@
+@use 'theme';
+
+body{
+  font-family: theme.$fontPrimary;
+  color: theme.$grey15;
+}
