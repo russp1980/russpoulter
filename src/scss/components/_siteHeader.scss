@@ -11,24 +11,23 @@
 
 .nav__list{
   display: flex;
-}
 
-.nav__list li{
-  display: inline-block;
-  margin-left: 1rem;
-}
+  li{
+    display: inline-block;
+    margin-left: 1rem;
+  }
 
-.nav__list a{
-  text-decoration: none;
-  line-height: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #212529;
-  position: relative;
-  top: 5px;
-  transition: .3s;
-}
-
-.nav__list a:hover{
-  color: theme.$blue;
+  a{
+    text-decoration: none;
+    line-height: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #212529;
+    position: relative;
+    top: 5px;
+    transition: .3s;
+    &:hover{
+      color: theme.$blue;
+    }
+  }
 }
