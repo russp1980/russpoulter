@@ -1,7 +1,11 @@
 @use 'theme';
 
-.wrapper{
-  max-width: 90rem;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+.site-body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.page-content{
+  flex: 1;
 }

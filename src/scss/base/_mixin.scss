@@ -26,3 +26,17 @@
     @media screen and (min-width: theme.$bpSmall) { @content ; }
   }
 }
+
+// gradient slide in text hover
+@mixin slideHover($colorStart, $colorEnd) {
+  background: linear-gradient(to right, $colorStart, $colorEnd 50%, theme.$grey15 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  &:hover{
+    color: $colorEnd;
+    background-position: 0 100%;
+  }
+}

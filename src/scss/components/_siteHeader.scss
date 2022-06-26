@@ -1,33 +1,80 @@
 @use '../base/theme';
+@use '../base/mixin';
+
 
 .site-header{
   &__inner{
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    padding: 1.5rem 0;
+    padding-top: mixin.calc-em(24px);
+    @include mixin.breakpoint(small){
+      padding-top: mixin.calc-em(48px);
+    }
+    @include mixin.breakpoint(medium){
+      padding-top: mixin.calc-em(64px);
+    }
   }
 }
 
 .nav__list{
   display: flex;
-
+  > * + * {
+    margin-left: mixin.calc-em(16px);
+    @include mixin.breakpoint(medium){
+      margin-left: mixin.calc-em(24px);
+    }
+  }
   li{
     display: inline-block;
-    margin-left: 1rem;
+    // margin-left: 1rem;
   }
-
   a{
     text-decoration: none;
-    line-height: 1rem;
-    font-size: 1rem;
+    line-height: mixin.calc-em(16px);
+    font-size: mixin.calc-em(16px);
     font-weight: 700;
-    color: #212529;
+    color: theme.$grey15;
+    background: linear-gradient(to right, theme.$blueLight, theme.$blue 50%, theme.$grey15 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
     position: relative;
     top: 5px;
-    transition: .3s;
     &:hover{
       color: theme.$blue;
+      background-position: 0 100%;
+    }
+    &.dribbble{
+      @include mixin.slideHover(theme.$dribbbleBright, theme.$dribbble);
+    }
+    &.twitter{
+      @include mixin.slideHover(theme.$twitterBright, theme.$twitter);
+    }
+    &.linkedin{
+      @include mixin.slideHover(theme.$linkedinBright, theme.$linkedin);
+    }
+    @include mixin.breakpoint(medium){
+      line-height: mixin.calc-em(19px);
+      font-size: mixin.calc-em(24px);
+    }
+  }
+}
+
+.logo{
+  line-height: 0;
+  display: inline-block;
+  svg{
+    width: 110px;
+    height: 48px;
+  }
+  @include mixin.breakpoint(medium){
+    svg{
+      width: 147px;
+      height: 64px;
     }
   }
 }

@@ -1,0 +1,54 @@
+@use "../base/theme";
+@use "../base/mixin";
+
+.big-nav{
+  &__list{
+    li{
+      margin-bottom: mixin.calc-em(48px);
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      @include mixin.breakpoint(large){
+        margin-bottom: mixin.calc-em(0px);
+        margin-right: mixin.calc-em(64px);
+        display: inline-block;
+        &:last-of-type{
+          margin-right:0;
+        }
+      }
+    
+      
+    }
+    a{
+      color: theme.$grey15;
+      text-decoration: none;
+      font-size: mixin.calc-em(16px);
+      transition: .3s;
+      font-weight: 500;
+      &:hover{
+        color: theme.$blueLight;
+        .big{
+          background-position: 0 100%;
+        }
+      }
+      .big{
+        font-size: mixin.calc-em(48px);
+        line-height: mixin.calc-em(38px);
+        display: block;
+        font-weight: 700;
+        margin-top: mixin.calc-em(4px);
+        background: linear-gradient(to right, theme.$blueLight, theme.$blue 50%, theme.$grey15 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+        @include mixin.breakpoint(medium){
+          font-size: mixin.calc-em(64px);
+          line-height: mixin.calc-em(50px);
+        }
+      }
+    }
+  }
+}

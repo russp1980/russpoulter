@@ -8,14 +8,24 @@
     <style>
       {% include "css/styles.css" ignore missing %}
     </style>
+
+
   </head>
 
-  <body>
+  <body class="site-body">
     {% include "components/_siteHeader.njk" %}
-    <main>
+    <main class="page-content">
       {% block main %}
       {% endblock %}
     </main>
     {% include "components/_siteFooter.njk" %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+    <script>
+      gsap.from('.intro__summary p', {opacity: 0, duration: 1, y: -50, stagger: 0.2, delay: 1})
+    </script>
+
   </body>
 </html>
+
