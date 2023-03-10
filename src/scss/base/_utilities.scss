@@ -2,8 +2,10 @@
 
 .wrapper{
   max-width: 90rem;
+  width: 100%;
   margin: 0 auto;
   padding: 0 mixin.calc-em(24px);
+  background-color: blue;
   @include mixin.breakpoint(small){
     padding: 0 mixin.calc-em(48px);
   }

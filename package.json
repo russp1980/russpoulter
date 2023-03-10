@@ -4,13 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --style=compressed src/scss/styles.scss src/_includes/css/styles.css",
-    "watch:eleventy": "eleventy --serve",
-    "watch:sass": "npm run sass -- --watch",
-    "start": "npm-run-all sass --parallel watch:*",
-    "build": "npm run sass && eleventy"
+    "dev": "gulp & npx @11ty/eleventy --serve"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,6 +15,13 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
-    "npm-run-all": "^4.1.5"
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^5.1.15",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.21"
   }
 }

@@ -13,12 +13,12 @@
   </head>
 
   <body class="site-body">
-    {% include "components/_siteHeader.njk" %}
-    <main class="page-content">
+    {% include "components/_siteHeader.html" %}
+    <main class="page-content wrapper">
       {% block main %}
       {% endblock %}
     </main>
-    {% include "components/_siteFooter.njk" %}
+    {% include "components/_siteFooter.html" %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 
