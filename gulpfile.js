@@ -11,11 +11,20 @@ return src('./src/scss/styles.scss', { allowEmpty: true })
     .pipe(sass({ outputStyle: 'compressed'})).on('error', sass.logError)
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('.'))
+    .pipe(dest('./_site/css'))
+}
+
+function cssInlineTask() {
+return src('./src/scss/inline-styles.scss', { allowEmpty: true })
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: 'compressed'})).on('error', sass.logError)
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('./src/_includes/css'))
 }
 
 function watchFiles() {
-watch('./**/*.scss', parallel(cssTask));
+watch('./**/*.scss', parallel(cssTask, cssInlineTask) );
 };
 
-exports.default = parallel(cssTask, watchFiles);
+exports.default = parallel(cssTask, cssInlineTask, watchFiles);

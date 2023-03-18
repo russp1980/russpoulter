@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ description }}">
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/styles.css">
     <style>
-      {% include "css/styles.css" ignore missing %}
+      {% include "css/inline-styles.css" ignore missing %}
     </style>
 
 
@@ -18,6 +19,7 @@
       {% block main %}
       {% endblock %}
     </main>
+    
     {% include "components/_siteFooter.html" %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
