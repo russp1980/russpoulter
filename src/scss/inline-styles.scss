@@ -1,5 +1,8 @@
 // Base Styles
+@use 'base/fonts';
 @use 'base/reset';
+@use 'base/mixin';
 @use 'base/utilities';
 @use 'base/typography';
+@use 'base/theme';
 @use 'base/layout';

@@ -1,8 +1,3 @@
-{% set inlinecss %}
-  {% include "css/inline-styles.css" %}
-{% endset %}
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,16 +7,16 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/css/styles.css">
     <style type="text/css" media="screen">
-      {{ inlinecss }}
+      {% include "css/inline-styles.css" ignore missing %}
     </style>
   </head>
+  
 
   <body class="site-body">
     {% include "components/_siteHeader.html" %}
     <main class="page-content wrapper">
       {% block main %}
       {% endblock %}
-      <h1>urgh</h1>
     </main>
 
     {% include "components/_siteFooter.html" %}
