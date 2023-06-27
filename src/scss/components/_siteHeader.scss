@@ -7,12 +7,12 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    padding-top: mixin.calc-em(24px);
+    padding: mixin.calc-em(24px) 0 mixin.calc-em(24px) 0;
     @include mixin.breakpoint(small){
-      padding-top: mixin.calc-em(48px);
+      padding: mixin.calc-em(48px) 0 mixin.calc-em(48px) 0;
     }
     @include mixin.breakpoint(medium){
-      padding-top: mixin.calc-em(64px);
+      padding: mixin.calc-em(64px) 0  mixin.calc-em(64px) 0;
     }
   }
 }

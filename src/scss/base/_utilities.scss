@@ -14,9 +14,9 @@
 }
 
 .pad-top{
-  padding-top: mixin.calc-em(96px);
+  padding-top: mixin.calc-em(64px);
   @include mixin.breakpoint(large){
-    padding-top: mixin.calc-em(128px);
+    padding-top: mixin.calc-em(64px);
   }
 }
 

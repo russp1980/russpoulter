@@ -1,0 +1,36 @@
+@use '../base/theme';
+@use '../base/mixin';
+
+.breadcrumbs{
+    // &_list{
+    // }
+    &_item{
+        display: inline-block;
+        padding-right: mixin.calc-em(28px);
+        margin-right: mixin.calc-em(4px);
+    }
+    &_link{
+        font-size: mixin.calc-em(24px);
+        line-height: mixin.calc-em(24px);
+        color: theme.$grey15;
+        text-decoration: none;
+        position: relative;
+        height: mixin.calc-em(24px);
+        display: block;
+        box-shadow: inset 0px -6px theme.$orange3;
+        transition: ease-in-out .2s;
+        &:hover{
+            box-shadow: inset 0px -24px theme.$orange3;
+        }
+        &:after{
+            display: inline-block;
+            position: absolute;
+            width: mixin.calc-em(24px);
+            height: mixin.calc-em(24px);
+            right: mixin.calc-em(-28px);
+            text-align: center;
+            content: " ";
+            background: url(/images/arrow-right-s-line.svg) no-repeat center center;
+        }
+    }
+}
