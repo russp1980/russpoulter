@@ -1,0 +1,15 @@
+@use '../base/theme';
+@use '../base/mixin';
+
+.page-title{
+    font-size: mixin.calc-em(64px);
+    line-height: mixin.calc-em(76px);
+    margin-top: mixin.calc-em(8px);
+    margin-bottom: mixin.calc-em(16px);
+    @include mixin.breakpoint(medium){
+        font-size: mixin.calc-em(128px);
+        line-height: mixin.calc-em(152px);
+        margin-top: mixin.calc-em(16px);
+        margin-bottom: mixin.calc-em(32px);
+    }
+}
