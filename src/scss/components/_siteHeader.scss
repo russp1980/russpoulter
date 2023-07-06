@@ -43,8 +43,8 @@
   a{
     display: inline-block;
     text-decoration: none;
-    line-height: mixin.calc-em(16px);
-    font-size: mixin.calc-em(16px);
+    line-height: 5vw;
+    font-size:5vw;
     font-weight: 700;
     color: theme.$grey15;
     background: linear-gradient(to right, theme.$blueLight, theme.$blue 50%, theme.$grey15 50%);
@@ -68,6 +68,11 @@
     }
     &.linkedin{
       @include mixin.slideHover(theme.$linkedinBright, theme.$linkedin);
+    }
+
+    @include mixin.breakpoint(small){
+      font-size: mixin.calc-em(18px);
+      line-height: mixin.calc-em(18px);
     }
     @include mixin.breakpoint(medium){
       font-size: mixin.calc-em(24px);
