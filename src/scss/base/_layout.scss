@@ -1,3 +1,4 @@
+@use 'base/mixin';
 @use 'theme';
 
 .site-body{
@@ -10,3 +11,20 @@
 .page-content{
   flex: 1;
 }
+
+.grid{
+  display: grid;
+  gap: mixin.calc-em(32px);
+  @include mixin.breakpoint(medium){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mixin.breakpoint(large){
+    gap: mixin.calc-em(64px);
+
+  }
+
+  &-1080{
+    max-width: mixin.calc-em(1080px);
+  }
+}
+

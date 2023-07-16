@@ -1,6 +1,12 @@
 @use '../base/theme';
 @use '../base/mixin';
 
+
+.page-intro{
+    @include mixin.breakpoint(medium){
+        margin-bottom:mixin.calc-em(108px);
+    }
+}
 .page-title{
     font-size: mixin.calc-em(64px);
     line-height: mixin.calc-em(76px);
