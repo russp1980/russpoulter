@@ -3,6 +3,7 @@
 
 
 .page-intro{
+    margin-bottom:mixin.calc-em(48px);
     @include mixin.breakpoint(medium){
         margin-bottom:mixin.calc-em(108px);
     }
