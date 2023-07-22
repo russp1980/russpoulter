@@ -20,6 +20,16 @@
   }
 }
 
+.pad-bot{
+  padding-bottom: mixin.calc-em(48px);
+  @include mixin.breakpoint(medium){
+    padding-bottom: mixin.calc-em(64px);
+  }
+  @include mixin.breakpoint(large){
+    padding-bottom: mixin.calc-em(128px);
+  }
+}
+
 .strike{
   text-decoration: line-through;
 }
