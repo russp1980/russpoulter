@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "gulp & npx @11ty/eleventy --serve"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,6 +14,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
     "autoprefixer": "^10.4.14",
     "cssnano": "^5.1.15",
     "gulp": "^4.0.2",

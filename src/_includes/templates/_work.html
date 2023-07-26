@@ -2,6 +2,9 @@
 
 {% block main %}
     <article>
+
+        {% include "components/_breadcrumbs.html" %}
+
         <h1>{{ title }}</h1>
         {{ content | safe }}
     </article>

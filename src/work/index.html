@@ -1,42 +1,24 @@
 ---
-title: Work - Russ Poulter
-description: This is some of my work.
+title: Work
+description: This is my portfolio. There are many like it but this one is mine.
+eleventyNavigation:
+    key: Work
+    parent: Home
 ---
 
 {% extends "templates/_default.html" %}
 
 {% block main %}
-    <section class="page-intro">
-        <nav class="breadcrumbs">
-            <ol class="breadcrumbs_list">
-                <li class="breadcrumbs_item">
-                    <a href="/" class="breadcrumbs_link">Home</a>
-                </li>
-                <li class="breadcrumbs_item">
-                    <a href="/work" class="breadcrumbs_link">Work</a>
-                </li>
-            </ol>
-        </nav>
 
-        <h1 class="page-title">Work.</h1>
-
-        <div class="intro__summary">
-            <p>This is my portfolio. There are many like it but this one is mine.</p>
-        </div>
-    </section>
+    {% include "components/_pageIntro.html" %}
 
     <section class="grid grid-1080 work-items [ pad-bot ]">
         
-        {% include "components/_card.html" %}
-        
-        {% include "components/_card.html" %}
-        
-        {% include "components/_card.html" %}
+        {% for item in collections.work %}
 
-        {% include "components/_card.html" %}
+            {% include "components/_card.html" %}
 
-        
-
+        {% endfor%}
         
 
     </section>
