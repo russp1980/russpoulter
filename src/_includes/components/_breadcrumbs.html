@@ -1,10 +1,9 @@
- <nav class="breadcrumbs">
+<nav class="breadcrumbs">
     <ol class="breadcrumbs_list">
+        {% for item in breadcrumbs %}
         <li class="breadcrumbs_item">
-            <a href="/" class="breadcrumbs_link">Home</a>
+            <a href="{{item.url}}" class="breadcrumbs_link">{{item.title}}</a>
         </li>
-        <li class="breadcrumbs_item">
-            <a href="/work" class="breadcrumbs_link">Work</a>
-        </li>
+        {% endfor %}
     </ol>
 </nav>

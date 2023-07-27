@@ -1,5 +1,5 @@
 ---
-title: 'Cloudtrainer'
+title: 'EE'
 summary: 'Overhauling the end-to-end user experience of an online training an platform.'
 thumbnail: '/images/work/cloudtrainer-thumb.jpg'
 thumbnail-alt: 'an image showing the web application cloudtrainer on 2 ipads'
@@ -8,11 +8,7 @@ breadcrumbs:
         url: /
     -   title: Work
         url: /work/
-tags:
-    -   Research
-    -   UX
-    -   UI
-displayOrder: 2
+displayOrder: 3
 layout: 'templates/_work.html'
 ---
 

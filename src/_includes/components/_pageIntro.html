@@ -4,7 +4,13 @@
 
         <h1 class="page-title">{{title}}</h1>
 
-        <div class="intro__summary">
-            <p>{{description}}</p>
+
+        {% if tags %}
+            {% include "components/_tags.html" %}
+        {% endif %}
+
+        <div class="intro__summary page-intro__summary">
+            <p>{{summary}}</p>
         </div>
+        
     </section>
