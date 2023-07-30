@@ -18,12 +18,13 @@
 .page-title{
     overflow-wrap: break-word;
     hyphens: auto;
-    font-size: mixin.calc-em(64px);
-    line-height: mixin.calc-em(76px);
+    font-size: clamp(1em, calc(.5em + 1vw), 2em);
+    font-size: clamp(2.5rem, calc(13.75vw + -0.25rem), 8rem);
+    line-height: clamp(2.5rem, calc(13.75vw + -0.25rem), 8rem);
+    // line-height: mixin.calc-em(76px);
     margin-top: mixin.calc-em(8px);
     @include mixin.breakpoint(medium){
-        font-size: mixin.calc-em(128px);
-        line-height: mixin.calc-em(152px);
+        // line-height: mixin.calc-em(152px);
         margin-top: mixin.calc-em(16px);
     }
 }

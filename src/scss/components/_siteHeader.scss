@@ -10,24 +10,23 @@
     margin-bottom: calc-em(48px);
     @include mixin.breakpoint(small){
       padding: mixin.calc-em(48px) 0 mixin.calc-em(48px) 0;
-      align-items: flex-end;
-      justify-content: space-between;
-      flex-direction: row;
     }
     @include mixin.breakpoint(medium){
       padding: mixin.calc-em(64px) 0  mixin.calc-em(64px) 0;
       margin-bottom: calc-em(96px);
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-direction: row;
     }
   }
 }
 
 .nav__list{
   display: flex;
-  > * + * {
-    margin-left: mixin.calc-em(16px);
-    @include mixin.breakpoint(medium){
-      margin-left: mixin.calc-em(24px);
-    }
+  column-gap: mixin.calc-em(16px);
+  flex-wrap: wrap;
+  @include mixin.breakpoint(medium){
+    column-gap: mixin.calc-em(24px);
   }
   li{
     display: flex;
@@ -43,8 +42,8 @@
   a{
     display: inline-block;
     text-decoration: none;
-    line-height: 5vw;
-    font-size:5vw;
+    font-size: mixin.calc-em(18px);
+    line-height: mixin.calc-em(18px);
     font-weight: 700;
     color: theme.$grey15;
     background: linear-gradient(to right, theme.$blueLight, theme.$blue 50%, theme.$grey15 50%);
@@ -71,8 +70,8 @@
     }
 
     @include mixin.breakpoint(small){
-      font-size: mixin.calc-em(18px);
-      line-height: mixin.calc-em(18px);
+      font-size: mixin.calc-em(22px);
+      line-height: mixin.calc-em(22px);
     }
     @include mixin.breakpoint(medium){
       font-size: mixin.calc-em(24px);

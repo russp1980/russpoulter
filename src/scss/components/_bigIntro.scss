@@ -6,14 +6,16 @@
     margin-top: mixin.calc-em(38.4px);
   }
   p{
-    font-size: mixin.calc-em(24px);
-    line-height: mixin.calc-em(38.4px);
+    // font-size: mixin.calc-em(24px);
+    // line-height: mixin.calc-em(38.4px);
+    font-size: clamp(1.5rem, calc(2.857vw + 0.786rem), 2.5rem);
+    line-height: clamp(2.4rem, calc(4.571vw + 1.257rem), 4rem);
     letter-spacing: -0.02em;
   }
-  @include mixin.breakpoint(medium){
-    p{
-      font-size: mixin.calc-em(40px);
-      line-height: mixin.calc-em(64px);
-    }
-  }
+  // @include mixin.breakpoint(medium){
+  //   p{
+  //     font-size: mixin.calc-em(40px);
+  //     line-height: mixin.calc-em(64px);
+  //   }
+  // }
 }
