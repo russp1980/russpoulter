@@ -46,19 +46,9 @@
     line-height: mixin.calc-em(18px);
     font-weight: 700;
     color: theme.$grey15;
-    background: linear-gradient(to right, theme.$blueLight, theme.$blue 50%, theme.$grey15 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: background-position 275ms ease;
     position: relative;
     top: 5px;
-    &:hover{
-      color: theme.$blue;
-      background-position: 0 100%;
-    }
+    @include mixin.slideHover(theme.$orange2, theme.$orange);
     &.dribbble{
       @include mixin.slideHover(theme.$dribbbleBright, theme.$dribbble);
     }
