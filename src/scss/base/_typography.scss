@@ -1,6 +1,31 @@
 @use 'theme';
+@use 'mixin';
 
 body{
   font-family: theme.$fontPrimary;
   color: theme.$grey15;
+}
+
+.content {
+  p{
+    max-width: mixin.calc-em(720px);
+    font-size: mixin.calc-em(16px);
+    line-height: mixin.calc-em(30px);
+    margin-bottom: mixin.calc-em(30px);
+    @include mixin.breakpoint(medium){
+      font-size: mixin.calc-em(24px);
+      line-height: mixin.calc-em(40px);
+      margin-bottom: mixin.calc-em(40px);
+    }
+    @include mixin.breakpoint(large){
+      margin-left: mixin.calc-em(56px);
+    }
+  }
+
+  .hero-img{
+    margin-bottom: mixin.calc-em(30px);
+    @include mixin.breakpoint(medium){
+      margin-bottom: mixin.calc-em(72px);
+    }
+  }
 }

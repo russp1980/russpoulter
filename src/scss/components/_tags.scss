@@ -4,7 +4,7 @@
 ul.tags{
     margin: mixin.calc-em(8px) 0 mixin.calc-em(4px) 0;
     @include mixin.breakpoint(large){
-        margin: mixin.calc-em(16px) 0 mixin.calc-em(8px) 0;
+        margin: mixin.calc-em(24px) 0 mixin.calc-em(8px) 0;
     }
 }
 
@@ -18,11 +18,13 @@ ul.tags{
     padding: 0 mixin.calc-em(12px);
     border-radius: mixin.calc-em(12px);
     margin-right: mixin.calc-em(12px);
+    margin-bottom: mixin.calc-em(12px);
     @include mixin.breakpoint(medium){
         font-size: mixin.calc-em(16px);
         line-height: mixin.calc-em(32px);
         padding: 0 mixin.calc-em(16px);
         border-radius: mixin.calc-em(16px);
         margin-right: mixin.calc-em(16px);
+        margin-bottom: 0;
     }
 }

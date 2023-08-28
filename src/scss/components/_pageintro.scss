@@ -10,6 +10,7 @@
 
     &__summary{
         margin-top: mixin.calc-em(16px);
+        max-width: mixin.calc-em(1080px);
         @include mixin.breakpoint(medium){
             margin-top:mixin.calc-em(32px);
         }

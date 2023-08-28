@@ -1,10 +1,21 @@
 {% extends "templates/_default.html" %}
 
 {% block main %}
-    <article>
+    <article class="grid-1080">
     
         {% include "components/_pageIntro.html" %}
 
-        {{ content | safe }}
+        <div class="content">
+            <img class="hero-img" src="{{hero}}" alt="{{hero-alt}}">
+
+            {% if overview %}
+                {% for item in overview %}
+                    <p>{{ item }}</p>
+                {% endfor %}
+            {% endif %}
+
+            {{ content | safe }}
+        </div>
+
     </article>
 {% endblock %}
