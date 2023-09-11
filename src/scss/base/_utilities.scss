@@ -30,6 +30,13 @@
   }
 }
 
+.margin-bot{
+  margin-bottom: mixin.calc-em(40px);
+  @include mixin.breakpoint(medium){
+    margin-bottom: mixin.calc-em(72px);
+  }
+}
+
 .strike{
   text-decoration: line-through;
 }

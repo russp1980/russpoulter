@@ -1,0 +1,9 @@
+{% if gallery %}
+    <div class="gallery [ pad-bot ]">
+        {% for item in gallery %}
+            <div class="gallery-item">
+                <img src="{{item.url}}" alt="{{item.alt}}">
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

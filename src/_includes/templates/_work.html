@@ -9,12 +9,19 @@
             <img class="hero-img" src="{{hero}}" alt="{{hero-alt}}">
 
             {% if overview %}
+                <div class="overview [ margin-bot ]">
                 {% for item in overview %}
                     <p>{{ item }}</p>
                 {% endfor %}
+                </div>
             {% endif %}
 
+            {% include "components/_gallery.html" %}
+            
+
             {{ content | safe }}
+
+
         </div>
 
     </article>
