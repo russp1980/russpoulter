@@ -7,7 +7,7 @@
     @include mixin.breakpoint(medium){
         grid-gap: mixin.calc-em(32px);
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        // grid-template-rows: repeat(4, 1fr);
         &-item{
             &:nth-of-type(1){
                 grid-row: auto / span 2;
@@ -16,6 +16,14 @@
                 grid-column: auto / span 2;
                 grid-row: auto / span 2;
             }
+            &:nth-of-type(6){
+                grid-row: auto / span 2;
+            }
         }
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
