@@ -2,9 +2,17 @@
 @use '../base/mixin';
 
 .card{
+    display: flex;
+    flex-direction: column;
+    @include mixin.breakpoint(small){
+        flex-direction: row;
+    }
+    @include mixin.breakpoint(medium){
+        flex-direction: column;
+    }
     &__image{
         display: block;
-        margin-bottom: mixin.calc-em(16px);
+        // margin-bottom: mixin.calc-em(16px);
         background-color: theme.$orange3;
         overflow: hidden;
         img{
@@ -12,20 +20,36 @@
             transition: ease-in-out .3s;
             // filter: blur(0);
             opacity: 1;
+            object-fit: cover;
+            height: 100%;
             &:hover{
                 // filter: blur(2px);
                 opacity: .8;
             }
         }
+        @include mixin.breakpoint(small){
+            // margin-bottom: mixin.calc-em(32px);
+            flex: 1;
+        }
         @include mixin.breakpoint(medium){
-            margin-bottom: mixin.calc-em(32px);
+            // margin-bottom: mixin.calc-em(32px);
+            flex: 0 1 auto;
         }
     }
 
     &__content{
-        @include mixin.breakpoint(large){
-            margin-right: mixin.calc-em(64px);
+        @include mixin.breakpoint(small){
+            flex: 2;
+            margin-top: 0;
+            margin-left: mixin.calc-em(16px);
         }
+        @include mixin.breakpoint(medium){
+            // margin-bottom: mixin.calc-em(32px);
+            flex: 0 1 auto;
+            margin-top: mixin.calc-em(16px);
+            margin-left: mixin.calc-em(0px);
+        }
+
     }
     &__excerpt{
         font-size: mixin.calc-em(18px);

@@ -14,7 +14,7 @@
 
 .grid{
   display: grid;
-  gap: mixin.calc-em(32px);
+  gap: mixin.calc-em(48px);
   @include mixin.breakpoint(medium){
     grid-template-columns: repeat(2, 1fr);
   }
