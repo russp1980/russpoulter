@@ -11,6 +11,11 @@ module.exports = function(config) {
     .sort((a, b) => (Number(a.data.displayOrder) > Number(b.data.displayOrder) ? 1 : -1));
 });
 
+config.addCollection('words', collection => {
+  return collection
+    .getFilteredByGlob('./src/words/*.md');
+});
+
     return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',

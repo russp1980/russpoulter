@@ -1,0 +1,17 @@
+{% extends "templates/_default.html" %}
+
+{% block main %}
+    {% include "components/_pageIntro.html" %}
+
+        <section class="grid grid-1080 work-items [ pad-bot ]">
+        
+        {% for item in collections.words %}
+
+            {% include "components/_card.html" %}
+
+        {% endfor%}
+        
+
+    </section>
+    
+{% endblock %}
