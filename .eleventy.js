@@ -12,8 +12,7 @@ module.exports = function(config) {
 });
 
 config.addCollection('words', collection => {
-  return collection
-    .getFilteredByGlob('./src/words/*.md');
+  return [... collection.getFilteredByGlob('./src/words/*.md')].reverse();
 });
 
     return {

@@ -1,0 +1,80 @@
+
+@use '../base/theme';
+@use '../base/mixin';
+
+.post-item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: mixin.calc-em(48px);
+    &__title{
+        display: block;
+        line-height: 1.25;
+        font-weight: 500;
+        a{
+            text-decoration: none;
+            color: theme.$grey15;
+            position: relative;
+            box-shadow: inset 0px -8px theme.$orange3;
+            transition: ease-in-out .3s;
+            &:hover{
+                box-shadow: inset 0px -24px theme.$orange3;
+            }
+        }
+    }
+
+    &__meta{
+        margin-bottom: mixin.calc-em(8px);
+    }
+
+    &__time{
+        font-weight: 600;
+    }
+
+    &__wordCount{
+        font-size: mixin.calc-em(14px);
+    } 
+    
+    @include mixin.breakpoint(medium){
+        flex-direction: row;
+        margin-bottom: mixin.calc-em(96px);
+        gap: mixin.calc-em(64px);
+        &__title{
+            a{
+                font-size: mixin.calc-em(36px);
+                box-shadow: inset 0px -12px theme.$orange3;
+                &:hover{
+                    box-shadow: inset 0px -38px theme.$orange3;
+                }
+            }
+        }
+        &__meta{
+            flex: 1;
+        }
+        &__content{
+            flex: 3;
+        }
+        &__time{
+            font-size: mixin.calc-em(20px);
+        }
+        &__wordCount{
+            font-size: mixin.calc-em(16px);
+        } 
+    }
+    
+    @include mixin.breakpoint(large){
+        &__title{
+            a{
+                font-size: mixin.calc-em(48px);
+                box-shadow: inset 0px -16px theme.$orange3;
+                &:hover{
+                    box-shadow: inset 0px -52px theme.$orange3;
+                }
+            }
+        }
+        &__time{
+            font-size: mixin.calc-em(24px);
+        }
+    }
+
+
+}

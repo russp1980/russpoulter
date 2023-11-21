@@ -3,15 +3,26 @@
 {% block main %}
     {% include "components/_pageIntro.html" %}
 
-        <section class="grid grid-1080 work-items [ pad-bot ]">
+        <section class="grid-1080 [ pad-bot ]">
+
+        <ol class="post-list">
+            {% for item in collections.words %}
+                <li class="post-item">
+                    <div class="post-item__meta">
+                        <p class="post-item__time"><time datetime="{{ item.date }}">{{ item.date.toDateString().slice(4) }}</time></p>
+                        <p class="post-item__wordCount">{{ item.data.word_count }} words</p>
+                    </div>
+                    <div class="post-item__content">
+                        <h2 class="post-item__title">
+                            <a href="{{ item.url }}">
+                                {{ item.data.title }}
+                            </a>
+                        </h2>
+                    </div>
+                </li>
+            {% endfor%}
+        </ol>
         
-        {% for item in collections.words %}
-
-            {% include "components/_card.html" %}
-
-        {% endfor%}
-        
-
     </section>
     
 {% endblock %}
