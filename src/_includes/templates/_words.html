@@ -1,8 +1,27 @@
 {% extends "templates/_default.html" %}
 
 {% block main %}
-    <article>
-        <h1>{{ title }}</h1>
+    <article class="grid-1080">
+
+
+        <section class="page-intro--blog">
+           
+            {% include "components/_breadcrumbs.html" %}
+            
+            <h1 class="page-title--blog">{{ title }}</h1>
+            <div class="blog-meta">
+                <p class="blog-meta__time">
+                    Published on
+                    <time datetime="{{ page.date }}">{{ page.date | readableDateLong }}</time> 
+                </p>
+            </div>
+            {% if tags %}
+                {% include "components/_tags.html" %}
+            {% endif %}
+        </section>
+
+
         {{ content | safe }}
+
     </article>
 {% endblock %}
