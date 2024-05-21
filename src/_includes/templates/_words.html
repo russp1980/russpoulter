@@ -12,12 +12,12 @@
             <div class="blog-meta">
                 <p class="blog-meta__time">
                     Published on
-                    <time datetime="{{ page.date }}">{{ page.date | readableDateLong }}</time> 
+                    <time datetime="{{ page.date }}">{{ page.date | readableDateLong }}</time>
                 </p>
+                {% if tags %}
+                    {% include "components/_tags.html" %}
+                {% endif %}
             </div>
-            {% if tags %}
-                {% include "components/_tags.html" %}
-            {% endif %}
         </section>
 
 

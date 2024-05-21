@@ -14,11 +14,11 @@
             margin-top:mixin.calc-em(32px);
         }
     }
+
 }
 .page-title{
     overflow-wrap: break-word;
     hyphens: auto;
-    font-size: clamp(1em, calc(.5em + 1vw), 2em);
     font-size: clamp(2.5rem, calc(13.75vw + -0.25rem), 8rem);
     line-height: clamp(2.5rem, calc(13.75vw + -0.25rem), 8rem);
     // line-height: mixin.calc-em(76px);
@@ -26,5 +26,10 @@
     @include mixin.breakpoint(medium){
         // line-height: mixin.calc-em(152px);
         margin-top: mixin.calc-em(16px);
+    }
+
+    &--blog{
+        font-size: clamp(2.25rem, 10vw, 6rem);
+        line-height: clamp(3rem, 11vw, 8rem);
     }
 }

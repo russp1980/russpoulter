@@ -1,5 +1,5 @@
 ---
-title: 'Hello world. I am a long hello world test title. oh yes I am very lomg'
+title: 'Week note #01. The beginning.'
 date: '2023-03-04'
 word_count: '250'
 tags:
