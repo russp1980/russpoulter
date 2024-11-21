@@ -15,6 +15,10 @@
         }
     }
 
+    &--blog{
+        margin-bottom: mixin.calc-em(96px);
+    }
+
 }
 .page-title{
     overflow-wrap: break-word;
