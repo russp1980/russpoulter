@@ -1,0 +1,30 @@
+@use '../base/mixin';
+
+.logos{
+   margin-top: auto;
+   margin-bottom: mixin.calc-em(24px);
+   h4{
+    font-weight: 400;
+   }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: mixin.calc-em(32px);
+        margin-top: mixin.calc-em(24px);
+        li{
+            width: 100%;
+            max-width: mixin.calc-em(64px);
+            img{
+                width: 100%;
+            }
+        }
+    }
+    @include mixin.breakpoint(medium){
+        &__list{
+            gap: mixin.calc-em(40px);
+        }
+        li{
+            max-width: mixin.calc-em(72px);
+        }
+    }
+}
