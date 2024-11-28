@@ -3,6 +3,7 @@
 .logos{
    margin-top: auto;
    margin-bottom: mixin.calc-em(24px);
+   max-width: mixin.calc-em(1080px);
    h4{
     font-weight: 400;
    }
