@@ -2,11 +2,12 @@
 
 .logos{
    margin-top: auto;
-   margin-bottom: mixin.calc-em(24px);
+//    margin-bottom: mixin.calc-em(24px);
    max-width: mixin.calc-em(1080px);
+   padding-top: mixin.calc-em(64px);
    h4{
-    font-weight: 400;
-   }
+       font-weight: 400;
+    }
     &__list{
         display: flex;
         flex-wrap: wrap;
@@ -20,7 +21,14 @@
             }
         }
     }
+    
+    @include mixin.breakpoint(small){
+        padding-top: mixin.calc-em(96px);
+    }
+    
+    
     @include mixin.breakpoint(medium){
+        padding-top: mixin.calc-em(128px);
         &__list{
             gap: mixin.calc-em(40px);
         }
