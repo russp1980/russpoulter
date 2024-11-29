@@ -1,5 +1,6 @@
 ---
 title: 'Edna App.'
+layout: templates/_case-study.html
 summary: 'Designing and launching a software platform that lets pre-school practitioners focus on the job they love.'
 thumbnail: '/images/work/edna-thumb.jpg'
 thumbnail-alt: 'an image showing the web application Edna in use on 2 phones'
